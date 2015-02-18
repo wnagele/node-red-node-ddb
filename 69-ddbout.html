@@ -16,8 +16,12 @@
 
 <script type="text/x-red" data-template-name="ddb out">
     <div class="form-row">
-        <label for="node-input-credentials"><i class="fa fa-tag"></i> Credentials</label>
-        <input type="text" id="node-input-credentials">
+        <label for="node-input-accessKey"><i class="fa fa-th"></i> Access Key</label>
+        <input type="text" id="node-input-accessKey">
+    </div>
+    <div class="form-row">
+        <label for="node-input-secretAccessKey"><i class="fa fa-th"></i> Secret Access Key</label>
+        <input type="text" id="node-input-secretAccessKey">
     </div>
     <div class="form-row">
         <label for="node-input-region"><i class="fa fa-th"></i> Region</label>
@@ -42,10 +46,13 @@
         category: "storage-output",
         color: "#ffaaaa",
         defaults: {
-            credentials: { type: "aws credentials", required: true },
             region: { value: "us-east-1", required: true },
             table: { value: "", required: true },
             name: { value: "" }
+        },
+        credentials: {
+            accessKey: { type: "text" },
+            secretAccessKey: { type: "password" }
         },
         inputs: 1,
         outputs: 0,
