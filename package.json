@@ -4,7 +4,7 @@
   "description": "A Node-RED node to store in Amazon DynamoDB",
   "dependencies": {
     "aws-sdk": "2.0.*",
-    "dynamodb-data-types": "0.2.*"
+    "dynamodb-data-types": "2.*"
   },
   "repository": {
     "type": "git",
